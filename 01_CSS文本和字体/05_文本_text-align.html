@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        .box2 {
+            background-color: bisque;
+            text-align: center;
+        }
+
+        .inner {
+            background-color: chartreuse;
+            width: 200px;
+            display: inline-block;
+            /* inline-block 改成行内元素*/
+        }
+
+        .box3 {
+            background-color: red;
+            width: 500px;
+            /*    text-align: justify
+            效果是将左右两边空格平分到中间单词间隔中
+            对最后一行没有效果 */
+            text-align: justify;
+            /* 如果希望对最后一行起效果可以加上 text-align-last: justify */
+            /* 但是在safari浏览器不起作用。。 */
+            text-align-last: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">哈哈哈</div>
+
+
+    <div class="box2">
+        <div class="inner">
+            块级元素
+        </div>
+    </div>
+
+
+    <div class="box3">
+        hellor world hellor world hellor world hellor world
+        hellor world hellor world hellor world hellor world
+        hellor world hellor world hellor world hellor world
+        hellor world hellor world hellor world hellor world
+    </div>
+</body>
+
+</html>

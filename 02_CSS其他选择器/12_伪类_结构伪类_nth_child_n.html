@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :nth-child(n) {
+            color: red;
+        }
+
+        /* 2n:偶数 或者even */
+        :nth-child(2n) {
+            color: seagreen;
+        }
+
+        /* 2n+1:奇数 或者odd */
+        :nth-child(2n+1) {
+            color: tan;
+        }
+
+        /* 前三个 */
+        :nth-child(-n+3) {
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+    </div>
+    <span>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+    </span>
+    <p>文字内容1</p>
+    <p>文字内容2</p>
+</body>
+
+</html>

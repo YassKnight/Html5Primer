@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 只包含直接选择器   不包含间接选择器 */
+        /* 后代可以接多个 比如 div>p>span{} */
+        /* 这里使用的元素标签，可以用类名来写 */
+        div>span {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <span>文字内容1</span>
+    <div>
+        <span>文件内容2</span>
+        <p>
+            <span>文件内容3</span>
+        </p>
+    </div>
+</body>
+
+</html>

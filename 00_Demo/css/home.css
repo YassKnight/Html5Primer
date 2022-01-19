@@ -1,0 +1,16 @@
+/* 指定编码格式 */
+@charset "utf-8";
+* {
+  color: rgb(235, 25, 25);
+}
+
+.box-hello {
+  color: aqua;
+  background-color: burlywood;
+  font-size: large;
+}
+
+#large-font{
+  width: 200px;
+  height: 200px;
+}

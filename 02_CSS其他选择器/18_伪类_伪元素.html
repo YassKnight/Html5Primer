@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 400px;
+        }
+
+        /* 伪元素一般用：：表示，也可以用： */
+        /* 首行 */
+        p::first-line {
+            color: salmon;
+        }
+
+        /* 首字母 */
+        p::first-letter {
+            font-size: 60px;
+        }
+
+        span::before {
+            content: "123";
+            color: #f00;
+        }
+
+        span::after {
+            content: url("../image/test.png");
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        onRestart：表示Activity正在重新启动。一般情况下，当当前Activity从不可见重新变为可见状态时，
+        onRestart就会被调用。这种情形一般是用户行为所导致的，比如用户按Home键切换到桌面或者用户打开了一个新的Activity，
+        这时当前的Activity就会暂停，也就是onPause和onStop被执行了，接着用户又回到了这个Activity，就会出现这种情况。
+    </p>
+
+
+    <div>
+        <span>
+            我是span元素
+        </span>
+    </div>
+</body>
+
+</html>
