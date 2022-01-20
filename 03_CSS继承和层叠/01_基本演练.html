@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 基本层叠，按照设置的顺序，最后一个生效 */
+        /* 前提是：使用了相同的选择器 */
+        .box1 {
+            color: aqua;
+        }
+
+        .box2 {
+            color: bisque;
+        }
+
+        .box3 {
+            color: blue;
+        }
+
+        /* 当选择器不同时，就不能按照基本层叠来理解
+        需要知道选择器的权重：
+            id: 100
+            class/属性/伪类:10
+            元素/伪元素:1 
+            
+            ！important:10000(权重最大)
+            内联样式：1000
+            通配符：0 
+        作用于相同的属性
+        */
+        #test {
+            color: chartreuse;
+        }
+
+        .box {
+            color: red !important;
+        }
+
+        div {
+            color: darkmagenta;
+            background-color: darkolivegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1 box2 box3">哈哈哈哈哈</div>
+    <div id="test" class="box">哈哈哈嘻嘻嘻</div>
+</body>
+
+</html>

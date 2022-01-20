@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 400px;
+        }
+
+        input,
+        textarea {
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: skyblue;
+            border-style: solid;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<!-- placeholder:占位字符
+    autofocus：获取焦点
+    readonly:只读 -->
+
+<!-- 表单提交：将用户在input中输入的内容提交给服务器
+        1、传统的表单提交
+            将所有的input包裹到一个form中
+            form设置action（服务器的地址）
+            input/button类型是submit
+            点击submit，自动将所有的数据上传服务器
+        弊端1:会进行页面跳转（意味着服务器必须提前将下一个页面写好，并且将写好的页面返回给前端，前端直接展示这个页面）服务器提前将页面也好：服务端渲染
+        弊端2:不方便进行表单数据的验证
+    
+        2、前后端分离
+            通过javaScript过去到所有表单的内容
+            通过正则表达式进行表单验证
+            发送ajax请求，将数据传递给服务器
+            验证成功后，服务器会返回结果，需要前端解析这个数据，并且决定显示什么内容（前端渲染和前端路由）
+        -->
+
+<body>
+    <form action="https://www.baidu.com/s">
+        <fieldset>
+            <legend>必填信息</legend>
+            <div>
+                <span>
+                    手机:
+                </span>
+                <input type="text" maxlength="11" placeholder="请输入手机号" autofocus name="phone" id="phone">
+            </div>
+            <div>
+                <span>
+                    密码:
+                </span>
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div>
+                <span>
+                    验证码:
+                </span>
+                <input type="text" maxlength="4" placeholder="请输入手机验证码" readonly>
+                <input type="button" value="获取验证码">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>选填信息</legend>
+            <div>
+                <span>
+                    照片:
+                </span>
+                <input type="file" value="选择照片">
+            </div>
+            <div>
+                <span>性别:</span>
+                男<input type="radio" name="sex">
+                女<input type="radio" name="sex" checked>
+            </div>
+            <div>
+                <span>爱好:</span>
+                唱歌<input type="checkbox" name="hobbies">
+                跳舞<input type="checkbox" name="hobbies">
+                玩游戏<input type="checkbox" name="hobbies">
+                篮球<input type="checkbox" name="hobbies">
+            </div>
+
+            <div>
+                <span>学历:</span>
+                <select name="" id="">
+                    <option value="1">小学</option>
+                    <option value="2">初中</option>
+                    <option value="3" selected>高中</option>
+                </select>
+            </div>
+
+            <div>
+                <span>
+                    简介:
+                </span>
+                <textarea name="" id="" cols="10" rows="5"></textarea>
+            </div>
+        </fieldset>
+
+        <!-- 重置按钮 
+        前提：
+            1、type必须是reset类型（value值可以不写）
+            2、所有的内容都必须在同一个表单中-->
+        <input type="reset">
+
+        <input type="submit">
+    </form>
+</body>
+
+</html>
