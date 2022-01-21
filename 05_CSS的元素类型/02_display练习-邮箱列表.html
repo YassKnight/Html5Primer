@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            border: 1px solid #999;
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        .box:hover ul {
+            display: block;
+        }
+
+        .header {
+            background-color: #999;
+            color: azure;
+        }
+
+        .box ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: snow;
+            display: none
+        }
+
+        .box ul li:hover {
+            background-color: aqua;
+        }
+
+        .box ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            邮箱列表
+        </div>
+        <ul class="email-list">
+            <li>
+                <a href="https://mail.163.com">
+                    网易邮箱
+                </a>
+            </li>
+            <li>
+                <a href="https://mail.qq.com">
+                    qq邮箱
+                </a>
+            </li>
+            <li>
+                <a href="https://www.bilibili.com">
+                    bilibili
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
